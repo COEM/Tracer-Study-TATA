@@ -1,0 +1,70 @@
+@extends('layouts.admin')
+
+@section('content')
+<!-- Start: Content-Wrapper -->
+    <section id="content_wrapper">
+        <!-- Begin: Content -->
+
+        <section id="content" class="table-layout animated fadeIn">
+            <div class="tray tray-center p40 va-t posr">
+            <a href="/admin/lowker/create" class="btn btn-info" role="button">Tambah Lowongan Kerja</a>
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="panel panel-visible" id="spy2">
+                            <div class="panel-heading">
+                                <div class="panel-title hidden-xs">
+                                <span class="glyphicon glyphicon-tasks"></span>Data Lowongan Kerja</div>
+                            </div>
+                            <div class="panel-body pn">
+                                <table class="table table-striped table-hover" id="datatable2" cellspacing="0" width="100%">
+                                    <thead>
+                                        <tr>
+                                            <th>No.</th>
+                                            <th>Judul</th>
+                                            <th>Lowongan Kerja</th>
+                                            <th>Gambar</th>
+                                            <th>Edit</th>
+                                            <th>Hapus</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        @foreach ($lowker as $e)
+                                            <tr>
+                                                <td>{{$loop->index + 1}}</td>
+                                                <td>{{$e->judul}}</td>
+                                                <td>{!!substr($e->isi, 0, 10)."..."!!}</td>
+                                                <td><img src="/images/lowker/{{$e->gambar}}" width="150"></td>
+                                                <td>
+                                                    <a href="/admin/lowker/{{$e->id}}/edit">
+                                                        <center>
+                                                            <button type="button" class="btn btn-primary btn-sm">
+                                                                <i class="fa fa-pencil-square-o" aria-hidden="true"></i>
+                                                            </button>
+                                                        </center>
+                                                    </a>
+                                                </td>
+
+
+                                                <td>
+                                                    <center>
+                                                        <form class="" action="/admin/lowker/{{$e->id}}" method="post" id="{{$e->id}}">
+                                                            {{csrf_field()}}
+                                                            {{method_field('DELETE')}}
+                                                            <button type="submit" class="btn btn-danger btn-sm delete-btn">
+                                                                <span class="glyphicon glyphicon-remove"></span>
+                                                            </button>
+                                                        </form>
+                                                    </center>
+                                                </td>
+                                            </tr>
+                                        @endforeach
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </section>
+@stop
