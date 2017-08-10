@@ -18,12 +18,12 @@
             </div>
             <div class="table-layout">
                 <div class="w200 text-center pr30 hidden-xs">
-                    <img src="/assets/img/avatars/profile_avatar.jpg" class="responsive">
+                    <img src="/images/avatar/<?php echo e(Auth::user()->alumni->avatar); ?>" height="165"  alt="/images/avatar/avatar.jpg" class="responsive">
                 </div>
                 <div class="va-t m30">
 
-                    <h2 class=""> Michael Halls <small> <?php echo e(Auth::user()->username); ?> </small></h2>
-                    <p class="fs15 mb20">Lorem ipsum dolor sit amet ctetur adicing elit, sed do eiusmod tempor incididunt</p>
+                    <h2 class=""> <?php echo e(Auth::user()->alumni->nama); ?> <small> <?php echo e(Auth::user()->username); ?> </small></h2>
+                    <p class="fs15 mb20"><?php echo e(Auth::user()->alumni->alamat); ?></p>
 
                     <ul class="list-inline list-unstyled">
                         <li>

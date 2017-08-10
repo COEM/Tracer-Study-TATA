@@ -22,6 +22,10 @@ Route::get('/dash', 'HomeController@index')->name('dash');
 Route::get('/alumni/profil', 'Alumni\ProfilController@index');
 Route::get('/alumni/agenda', 'Alumni\BeritaController@index');
 Route::get('/alumni/lowker', 'Alumni\LowkerController@index');
+Route::get('/alumni/agenda/create', 'Alumni\BeritaController@create');
+Route::post('/alumni/agenda', 'Alumni\BeritaController@store');
+Route::get('/alumni/lowker/create', 'Alumni\LowkerController@create');
+Route::post('/alumni/lowker', 'Alumni\LowkerController@store');
 
 Auth::routes();
 Route::prefix('admin')->group(function() {
@@ -30,6 +34,8 @@ Route::prefix('admin')->group(function() {
 	Route::post('/login', 'Auth\AdminLoginController@login')->name('admin.login.submit');
 	Route::resource('/soal', 'Admin\SoalController');
 	Route::resource('/berita', 'Admin\BeritaController');
+	Route::get('berita/{id}/post','Admin\BeritaController@updatePost');
 	Route::resource('/lowker', 'Admin\LowkerController');
 	Route::resource('/alumni', 'Admin\AlumniController');
+	Route::get('lowker/{id}/post','Admin\LowkerController@updatePost');
 });

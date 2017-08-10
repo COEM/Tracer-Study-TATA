@@ -2,9 +2,18 @@
 <section id="content_wrapper">
 	<div class="mt30 timeline-single" id="timeline">
 	    <div class="row">
+
 	        <div class="col-sm-6 left-column">
+				<div class="timeline-divider mtn">
+	                
+	                <div class="pull-right">
+	                    <a href="/alumni/agenda/create" class="btn btn-success">Tambah Berita</a>
+	                </div>
+	            </div>
 	            <?php $__currentLoopData = $berita; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $e): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
+
 	            	<div class="timeline-item">
+
 		                <div class="timeline-icon">
 	                        <span class="glyphicons glyphicons-edit text-warning"></span>
 	                    </div>

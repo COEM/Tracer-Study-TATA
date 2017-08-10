@@ -23,6 +23,7 @@
                                             <th>Judul</th>
                                             <th>Lowongan Kerja</th>
                                             <th>Gambar</th>
+                                            <th>Status</th>
                                             <th>Edit</th>
                                             <th>Hapus</th>
                                         </tr>
@@ -34,6 +35,13 @@
                                                 <td>{{$e->judul}}</td>
                                                 <td>{!!substr($e->isi, 0, 10)."..."!!}</td>
                                                 <td><img src="/images/lowker/{{$e->gambar}}" width="150"></td>
+                                                <td>
+                                                    @if ($e->status)
+                                                        <a href="" class="btn btn-success">Post</a>
+                                                    @else
+                                                        <a href="/admin/lowker/{{$e->id}}/post" class="btn btn-warning">Pending</a>
+                                                    @endif
+                                                </td>
                                                 <td>
                                                     <a href="/admin/lowker/{{$e->id}}/edit">
                                                         <center>

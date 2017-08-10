@@ -10,7 +10,7 @@ class LowkerController extends Controller
 {
     public function index()
     {
-    	$lowker = Lowker::paginate(5);
+    	$lowker = Lowker::latest()->where('status',true)->paginate(5);
     	// return $berita;
     	return view('user.lowker',compact('lowker'));
     }

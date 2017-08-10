@@ -19,7 +19,7 @@ class LowkerController extends Controller
     }
     public function index()
     {
-        $lowker = Lowker::all();
+        $lowker = Lowker::all()->sortByDesc("created_at");
         return view('admin.lowker.index',compact('lowker'));
     }
 
@@ -52,6 +52,8 @@ class LowkerController extends Controller
         $lowker->judul = $request->judul;
         $lowker->isi = $request->isi;
         $lowker->gambar = $request->gambar->getClientOriginalName();
+        $lowker->penulis = "admin";
+        $lowker->status = true;
         $lowker->save();
 
         $file = $request->file('gambar');
@@ -122,6 +124,13 @@ class LowkerController extends Controller
         //     'message' => 'Ruang berhasil hapus!',
         //     'alert-type' => 'success'
         // ];
+        return redirect('/admin/lowker');
+    }
+
+    public function updatePost($id){
+        $lowker = Lowker::find($id);
+        $lowker->status = true;
+        $lowker->save();
         return redirect('/admin/lowker');
     }
 }

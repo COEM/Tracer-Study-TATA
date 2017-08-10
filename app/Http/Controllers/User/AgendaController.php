@@ -8,7 +8,7 @@ use App\Berita;
 class AgendaController extends Controller
 {
     public function index(){
-    	$berita = Berita::paginate(5);
+    	$berita = Berita::latest()->where('status',true)->paginate(5);
     	// return $berita;
     	return view('user.agenda',compact('berita'));
     }

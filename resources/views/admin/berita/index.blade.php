@@ -23,6 +23,7 @@
                                             <th>Judul</th>
                                             <th>Berita</th>
                                             <th>Gambar</th>
+                                            <th>Status</th>
                                             <th>Edit</th>
                                             <th>Hapus</th>
                                         </tr>
@@ -35,6 +36,13 @@
                                                 {{-- {{  }} --}}
                                                 <td>{!!substr($e->isi, 0, 10)."..."!!}</td>
                                                 <td><img src="/images/berita/{{$e->gambar}}" width="150"></td>
+                                                <td>
+                                                @if ($e->status)
+                                                    <a href="" class="btn btn-success">Post</a>
+                                                @else
+                                                    <a href="/admin/berita/{{$e->id}}/post" class="btn btn-warning">Pending</a>
+                                                @endif
+                                                </td>
                                                 <td>
                                                     <a href="/admin/berita/{{$e->id}}/edit">
                                                         <center>

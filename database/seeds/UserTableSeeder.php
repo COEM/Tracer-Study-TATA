@@ -17,6 +17,7 @@ class UserTableSeeder extends Seeder
               'email' => 'ibnuul@gmail.com',
               'password' => Hash::make('password'),
               'alumni_id' => '1',
+              'avatar' => '12556012_1988946474662893_1839458589_n.jpg'
               //'userable_type' => 'App\Admin'
             ]
 

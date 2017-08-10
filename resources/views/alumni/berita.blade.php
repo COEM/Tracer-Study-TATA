@@ -3,9 +3,18 @@
 <section id="content_wrapper">
 	<div class="mt30 timeline-single" id="timeline">
 	    <div class="row">
+
 	        <div class="col-sm-6 left-column">
+				<div class="timeline-divider mtn">
+	                {{-- <div class="divider-label"><a href="" class="btn-link">Tambah Berita</a></div> --}}
+	                <div class="pull-right">
+	                    <a href="/alumni/agenda/create" class="btn btn-success">Tambah Berita</a>
+	                </div>
+	            </div>
 	            @foreach ($berita as $e)
+
 	            	<div class="timeline-item">
+
 		                <div class="timeline-icon">
 	                        <span class="glyphicons glyphicons-edit text-warning"></span>
 	                    </div>

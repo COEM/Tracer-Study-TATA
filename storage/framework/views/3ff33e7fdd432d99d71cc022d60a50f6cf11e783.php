@@ -21,6 +21,7 @@
                                             <th>Judul</th>
                                             <th>Berita</th>
                                             <th>Gambar</th>
+                                            <th>Status</th>
                                             <th>Edit</th>
                                             <th>Hapus</th>
                                         </tr>
@@ -33,6 +34,13 @@
                                                 
                                                 <td><?php echo substr($e->isi, 0, 10)."..."; ?></td>
                                                 <td><img src="/images/berita/<?php echo e($e->gambar); ?>" width="150"></td>
+                                                <td>
+                                                <?php if($e->status): ?>
+                                                    <a href="" class="btn btn-success">Post</a>
+                                                <?php else: ?>
+                                                    <a href="/admin/berita/<?php echo e($e->id); ?>/post" class="btn btn-warning">Pending</a>
+                                                <?php endif; ?>
+                                                </td>
                                                 <td>
                                                     <a href="/admin/berita/<?php echo e($e->id); ?>/edit">
                                                         <center>

@@ -18,15 +18,12 @@ class CreateLowkersTable extends Migration
             $table->string('judul');
             $table->longtext('isi');
             $table->string('gambar')->nullable();
+            $table->string('penulis');
+            $table->boolean('status');
             $table->timestamps();
         });
     }
 
-    /**
-     * Reverse the migrations.
-     *
-     * @return void
-     */
     public function down()
     {
         Schema::dropIfExists('lowkers');
