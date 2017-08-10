@@ -13,6 +13,6 @@ class Soal extends Model
 	}
 
 	public function sub(){
-		return $this->belongsTo(SubSoal::class);
+		return $this->belongsTo(Kategori::class);
 	}
 }

@@ -55,6 +55,17 @@
                                     </div>
                                   </div>
                             </div>
+                        <div class="form-group">
+                            <label class="col-lg-3 control-label" for="textArea2">Isi Berita</label>
+                            <div class="col-lg-8">
+                                <select class="form-control m-b" name="kategori_id">
+                                <option value="@yield('editIdKategori')">@yield('editKategori','Pilih Kategori soal')</option>
+                                @foreach ($kategori as $e)
+                                    <option value="{{$e->id}}">{{$e->kategori}}</option>
+                                @endforeach
+                            </select>
+                            </div>
+                        </div>
                         </div>
 
                         <div class="form-group">

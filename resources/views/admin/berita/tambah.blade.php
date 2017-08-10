@@ -8,6 +8,7 @@
                 <div class="panel-heading">
                     <span class="panel-title">Standard Fields</span>
                 </div>
+                {{-- {{var_dump($kategori)}} --}}
                 <div class="panel-body">
                     <form  action="/admin/berita/@yield('editBeritaId')" class="form-horizontal" role="form" method="post" enctype="multipart/form-data">
                     {{csrf_field()}}
@@ -19,7 +20,6 @@
                                 <input type="text" id="inputStandard" class="form-control" value="@yield('editJudul')" name="judul">
                             </div>
                         </div>
-
 
                         <div class="form-group">
                             <label class="col-lg-3 control-label" for="textArea2">Isi Berita</label>

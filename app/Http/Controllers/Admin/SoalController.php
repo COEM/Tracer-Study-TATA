@@ -6,7 +6,7 @@ use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 use App\Soal;
 use App\Opsi;
-use App\SubSoal;
+use App\Kategori;
 
 class SoalController extends Controller
 {
@@ -21,8 +21,8 @@ class SoalController extends Controller
     }
 
     public function create(){
-        $sub = SubSoal::all();
-        return view('admin.soal.tambah',compact('sub'));
+        $kategori = Kategori::all();
+        return view('admin.soal.tambah',compact('kategori'));
     }
 
     public function store(Request $request){
@@ -31,6 +31,7 @@ class SoalController extends Controller
             'soal' => 'required',
         ]);
         $soal->soal = $request->soal;
+        $soal->kategori_id = $request->kategori_id;
         if ($request->opsi) {
             $soal->type = "opsi";
             $soal->save();
@@ -69,7 +70,8 @@ class SoalController extends Controller
     public function edit($id)
     {
         $soal = Soal::find($id);
-        return view('admin.soal.edit',compact('soal'));
+        $kategori = Kategori::all();
+        return view('admin.soal.edit',compact('soal','kategori'));
     }
 
     /**
@@ -106,10 +108,6 @@ class SoalController extends Controller
     {
         $soal = Soal::find($id);
         $soal->delete();
-        // $alert = [
-        //     'message' => 'Ruang berhasil hapus!',
-        //     'alert-type' => 'success'
-        // ];
         return redirect('/admin/soal');
     }
 }

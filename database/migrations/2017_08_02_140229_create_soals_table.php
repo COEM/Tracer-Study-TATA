@@ -17,9 +17,9 @@ class CreateSoalsTable extends Migration
             $table->increments('id');
             $table->string('soal');
             $table->enum('type',['opsi','essay']);
-            $table->integer('subsoal_id')->unsigned();
+            $table->integer('kategori_id')->unsigned();
             $table->timestamps();
-            $table->foreign('subsoal_id')->references('id')->on('sub_soals')->onUpdate('cascade');
+            $table->foreign('kategori_id')->references('id')->on('kategoris')->onUpdate('cascade');
         });
     }
 
