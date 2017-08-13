@@ -4,7 +4,7 @@
 <div class="main_bg">
 		<div class="container">
 				<div class="main row">
-				<div class="col-md-8 blog_left">
+				{{-- <div class="col-md-8 blog_left"> --}}
 					<div class="col-md-8 blog_left">
 						@if (sizeof($berita) > 0)
 							@foreach ($berita as $e)

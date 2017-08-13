@@ -15,13 +15,13 @@ class CreateJawabansTable extends Migration
     {
         Schema::create('jawabans', function (Blueprint $table) {
             $table->increments('id');
-            $table->integer('user_id')->unsigned();
-            $table->integer('soal_id')->unsigned();
-            $table->string('ket');
+            $table->integer('alumni_id')->unsigned();
+            $table->integer('kategori_id')->unsigned();
+            $table->json('ket');
+            $table->date('periode');
             $table->timestamps();
-
-            $table->foreign('user_id')->references('id')->on('users')->onUpdate('cascade');
-            $table->foreign('soal_id')->references('id')->on('soals')->onUpdate('cascade');
+            $table->foreign('alumni_id')->references('id')->on('alumnis')->onUpdate('cascade');
+            $table->foreign('kategori_id')->references('id')->on('kategoris')->onUpdate('cascade');
         });
     }
 

@@ -1,5 +1,5 @@
 <?php
-
+use App\Kategori;
 Route::get('/', function () {
     return view('user.index');
 });
@@ -18,6 +18,11 @@ Route::get('/kontak', function () {
     return view('user.kontak');
 });
 
+Route::get('/test', function () {
+    $soal = Kategori::find(1);
+    return $soal->soal;
+});
+
 Route::get('/dash', 'HomeController@index')->name('dash');
 Route::get('/alumni/profil', 'Alumni\ProfilController@index');
 Route::get('/alumni/agenda', 'Alumni\BeritaController@index');
@@ -26,6 +31,16 @@ Route::get('/alumni/agenda/create', 'Alumni\BeritaController@create');
 Route::post('/alumni/agenda', 'Alumni\BeritaController@store');
 Route::get('/alumni/lowker/create', 'Alumni\LowkerController@create');
 Route::post('/alumni/lowker', 'Alumni\LowkerController@store');
+Route::get('/alumni/soal', 'Alumni\SoalController@index');
+// Route::get('/alumni/soal/identitas_pribadi', 'Alumni\SoalController@indexIdentitasPribadi');
+// Route::post('/alumni/soal/identitas_pribadi', 'Alumni\SoalController@storeIdentitasPribadi');
+// Route::get('/alumni/soal/di_isi_telah_bekerja', 'Alumni\SoalController@indexDiIsiTelahBekerja');
+// Route::post('/alumni/soal/di_isi_telah_bekerja', 'Alumni\SoalController@storeDiIsiTelahBekerja');
+// Route::get('/alumni/soal/wirausaha', 'Alumni\SoalController@indexWirausaha');
+
+Route::get('/alumni/soal/{kategori}', 'Alumni\SoalController@indexSoal');
+Route::post('/alumni/soal/{kategori}', 'Alumni\SoalController@storeJawabanSoal');
+
 
 Auth::routes();
 Route::prefix('admin')->group(function() {

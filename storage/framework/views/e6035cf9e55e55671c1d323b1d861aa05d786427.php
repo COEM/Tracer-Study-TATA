@@ -2,6 +2,7 @@
 <div class="main_bg">
 		<div class="container">
 				<div class="main row">
+				
 					<div class="col-md-8 blog_left">
 						<?php if(sizeof($berita) > 0): ?>
 							<?php $__currentLoopData = $berita; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $e): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
