@@ -17,8 +17,18 @@
         <li><a href="/agenda">Agenda</a></li>
         <li><a href="/lowker">Lowongan Pekerjaan</a></li>
         <li><a href="/kontak">Kontak</a></li>
-        <li><a href="{{ route('login')}}">Login</a></li>
-        <li><a href="{{ route('register') }}">Register</a></li>
+        @if (Auth::user())
+          <li><a href="/dash">Dashboard</a></li>
+          <li><a href="{{ route('logout') }}" class="fw600 p12 animated animated-short fadeInDown"
+                    onclick="event.preventDefault();document.getElementById('logout-form').submit();">
+                    Logout</li>
+                    <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
+                    {{ csrf_field() }}
+                </form>
+        @else
+          <li><a href="{{ route('login')}}">Login</a></li>
+          <li><a href="{{ route('register') }}">Register</a></li>
+        @endif
       </ul>
     </div>
     <!-- /.navbar-collapse -->

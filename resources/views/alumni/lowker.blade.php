@@ -56,4 +56,5 @@
 	    	{{$lowker->links()}}
 	    </center>
 	</div>
+	</section>
 @stop

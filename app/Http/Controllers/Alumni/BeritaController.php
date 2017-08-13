@@ -9,6 +9,10 @@ use App\Berita;
 
 class BeritaController extends Controller
 {
+    public function __construct()
+    {
+         $this->middleware('auth');
+    }
     public function index(){
     	$berita = Berita::latest()->where('status',true)->paginate(5);
     	return view('alumni.berita',compact('berita'));

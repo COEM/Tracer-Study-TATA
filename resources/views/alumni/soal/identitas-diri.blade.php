@@ -1,8 +1,10 @@
 {{-- use App\Opsi; --}}
 @extends('layouts.alumni')
 @section('content')
+
 <section id="content_wrapper">
     <div id="content" class="animated fadeIn">
+    <div class="row">
         <div class="col-md-12">
             <div class="panel">
                 <div class="panel-heading">
@@ -40,6 +42,14 @@
                 </div>
             </div>
         </div>
+        </div>
     </div>
 </section>
 @stop
+
+
+
+
+{{-- @extends('layouts.alumni')
+@section('content')
+@stop --}}

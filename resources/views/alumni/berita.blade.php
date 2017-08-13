@@ -59,4 +59,5 @@
 	    	{{$berita->links()}}
 	    </center>
 	</div>
+	</section>
 @stop

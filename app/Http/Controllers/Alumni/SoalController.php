@@ -15,6 +15,11 @@ class SoalController extends Controller
     	return view('alumni.soal');
     }
 
+    public function __construct()
+    {
+         $this->middleware('auth');
+    }
+
     public function indexSoal($kategori){
         $check = Kategori::where('kategori',$kategori)->get()->first();
         $opsi = Soal::where('kategori_id',$check->id)->get();
@@ -22,7 +27,7 @@ class SoalController extends Controller
     }
 
     public function storeJawabanSoal(Request $req,$kategori){
-    	$kategori = Kategori::where('kategori',$kategori)->get()->first();
+        $kategori = Kategori::where('kategori',$kategori)->get()->first();
     	$jawaban = new Jawaban;
 
     	$jawaban->alumni_id = Auth::user()->id;

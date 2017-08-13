@@ -49,13 +49,32 @@
                             <span class="glyphicons glyphicons-more_windows"></span> Wirausaha </a>
                     </li>
                     <li>
-                        <a href="/alumni/soal/Identitas Diri">
-                            <span class="glyphicons glyphicons-magic"></span> Admin Wizard </a>
+                        <a href="/alumni/soal/Pendidikan Lanjut">
+                            <span class="glyphicons glyphicons-magic"></span> Pendidikan Lanjut </a>
                     </li>
                     <li>
-                        <a href="admin_forms-validation.html">
-                            <span class="glyphicons glyphicons-check"></span> Admin Validation </a>
+                        <a href="/alumni/soal/Tidak Bekerja">
+                            <span class="glyphicons glyphicons-check"></span> Tidak Bekerja
+                        </a>
                     </li>
+
+                    <li>
+                        <a href="/alumni/soal/Pendapatan Primer atau Sekunder">
+                            <span class="glyphicons glyphicons-check"></span> Pendapatan Primer atau Sekunder
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="/alumni/soal/Hubungan Pendidikan dan Kerja">
+                            <span class="glyphicons glyphicons-check"></span> Hubungan Pendidikan dan Kerja
+                        </a>
+                    </li>
+                    <li>
+                        <a href="/alumni/soal/Instrumen">
+                            <span class="glyphicons glyphicons-check"></span> Instrumen
+                        </a>
+                    </li>
+
                 </ul>
             </li>
 

@@ -1,6 +1,8 @@
 <?php $__env->startSection('content'); ?>
+
 <section id="content_wrapper">
     <div id="content" class="animated fadeIn">
+    <div class="row">
         <div class="col-md-12">
             <div class="panel">
                 <div class="panel-heading">
@@ -19,7 +21,6 @@
                                     <?php if($e->type == "essay"): ?>
                                         <input type="text" id="inputStandard" class="form-control" value="<?php echo $__env->yieldContent('editJudul'); ?>" name="<?php echo e(str_slug($e->soal)); ?>">
                                     <?php elseif($e->type == "opsi"): ?>
-                                        
                                             <?php $__currentLoopData = $e->opsi; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $o): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
                                                 <div class="radio-custom mb5">
                                                     <input type="radio" name="<?php echo e(str_slug($e->soal)); ?>" id="<?php echo e(str_slug($o->ket)); ?>" value="<?php echo e($o->ket); ?>">
@@ -41,7 +42,13 @@
                 </div>
             </div>
         </div>
+        </div>
     </div>
 </section>
 <?php $__env->stopSection(); ?>
+
+
+
+
+
 <?php echo $__env->make('layouts.alumni', array_except(get_defined_vars(), array('__data', '__path')))->render(); ?>

@@ -7,7 +7,7 @@ use App\Alumni;
 use App\Http\Controllers\Controller;
 use Illuminate\Support\Facades\Validator;
 use Illuminate\Foundation\Auth\RegistersUsers;
-
+use Redirect;
 
 class RegisterController extends Controller
 {
@@ -26,15 +26,17 @@ class RegisterController extends Controller
     }
 
     protected function create(array $data){
+        // return $this->getRegData($data['username']);
         $nim = $data['username'];
         if ($this->hasData($nim)) {
             return User::create([
                 'username' => $data['username'],
                 'email' => $data['email'],
                 'password' => bcrypt($data['password']),
+                'alumni_id' => $this->getRegData($data['username'])->id
             ]);
         } else {
-            return Redirect::route('login');
+            dd([$data,"FAILED REGISTER, NIM NOT FOUND"]);
         }
     }
 

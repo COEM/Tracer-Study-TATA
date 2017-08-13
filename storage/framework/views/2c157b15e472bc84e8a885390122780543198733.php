@@ -17,8 +17,19 @@
         <li><a href="/agenda">Agenda</a></li>
         <li><a href="/lowker">Lowongan Pekerjaan</a></li>
         <li><a href="/kontak">Kontak</a></li>
-        <li><a href="<?php echo e(route('login')); ?>">Login</a></li>
-        <li><a href="<?php echo e(route('register')); ?>">Register</a></li>
+        <?php if(Auth::user()): ?>
+          <li><a href="/dash">Dashboard</a></li>
+          <li><a href="<?php echo e(route('logout')); ?>" class="fw600 p12 animated animated-short fadeInDown"
+                    onclick="event.preventDefault();document.getElementById('logout-form').submit();">
+                    Logout</li>
+                    <form id="logout-form" action="<?php echo e(route('logout')); ?>" method="POST" style="display: none;">
+                    <?php echo e(csrf_field()); ?>
+
+                </form>
+        <?php else: ?>
+          <li><a href="<?php echo e(route('login')); ?>">Login</a></li>
+          <li><a href="<?php echo e(route('register')); ?>">Register</a></li>
+        <?php endif; ?>
       </ul>
     </div>
     <!-- /.navbar-collapse -->
