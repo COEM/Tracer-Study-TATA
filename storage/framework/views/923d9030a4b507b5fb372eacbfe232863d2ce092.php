@@ -1,11 +1,22 @@
 
 
+
+
 <script type="text/javascript" src="/vendor/jquery/jquery-1.11.1.min.js"></script>
 <script type="text/javascript" src="/vendor/jquery/jquery_ui/jquery-ui.min.js"></script>
 
 <script type="text/javascript" src="/assets/js/main.js"></script>
 
+
+
+
+
+
 <!-- Bootstrap -->
+
+
+
+
 <script type="text/javascript" src="/assets/js/bootstrap/bootstrap.min.js"></script>
 
 <!-- Page Plugins -->
@@ -99,3 +110,5 @@
         e.preventDefault(); $(this).parent('div').remove(); x--;
     })
 </script>
+
+

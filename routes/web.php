@@ -33,6 +33,7 @@ Route::get('/alumni/lowker/create', 'Alumni\LowkerController@create');
 Route::post('/alumni/lowker', 'Alumni\LowkerController@store');
 Route::get('/alumni/soal', 'Alumni\SoalController@index');
 
+
 Route::get('/alumni/soal/{kategori}', 'Alumni\SoalController@indexSoal');
 Route::post('/alumni/soal/{kategori}', 'Alumni\SoalController@storeJawabanSoal');
 
@@ -48,4 +49,6 @@ Route::prefix('admin')->group(function() {
 	Route::resource('/lowker', 'Admin\LowkerController');
 	Route::resource('/alumni', 'Admin\AlumniController');
 	Route::get('lowker/{id}/post','Admin\LowkerController@updatePost');
+	Route::get('stats/jumlah_pengisi', 'Admin\StatsController@jumlahPengisi');
+	Route::get('stats/total_pengisi', 'Admin\StatsController@totalPengisi');
 });

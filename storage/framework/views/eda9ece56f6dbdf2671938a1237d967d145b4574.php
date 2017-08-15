@@ -8,10 +8,11 @@
 
     <!-- Theme CSS -->
     <link rel="stylesheet" type="text/css" href="/assets/skin/default_skin/css/theme.css">
+    
 
     <!-- Admin Forms CSS -->
     <link rel="stylesheet" type="text/css" href="/assets/admin-tools/admin-forms/css/admin-forms.css">
 
     <!-- Datatables CSS -->
     <link rel="stylesheet" type="text/css" href="/vendor/plugins/datatables/media/css/dataTables.bootstrap.css">
-
+     

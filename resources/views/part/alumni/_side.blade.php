@@ -29,7 +29,8 @@
                     <span class="glyphicons glyphicons-book_open"></span>
                     <span class="sidebar-title">Lowongan Kerja</span>
                 </a>
-            </li>            <li>
+            </li>            
+            <li>
                 <a class="accordion-toggle menu-open" href="/alumni/soal">
                     <span class="glyphicons glyphicons-cup"></span>
                     <span class="sidebar-title">Tracer Study</span>

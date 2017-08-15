@@ -7,13 +7,60 @@
         display: none;
     }
     </style> --}}
+{{-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script> --}}
+{{-- <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script> --}}
 
 <script type="text/javascript" src="/vendor/jquery/jquery-1.11.1.min.js"></script>
 <script type="text/javascript" src="/vendor/jquery/jquery_ui/jquery-ui.min.js"></script>
 
 <script type="text/javascript" src="/assets/js/main.js"></script>
+{{-- <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.6.0/Chart.bundle.js" charset="utf-8"></script> --}}
+
+
+{{-- <script>
+        var url = "{{url('admin/stats/total_pengisi')}}";
+        // var Years = new Array();
+        var total = new Array();
+        var periode = new Array();
+        $(document).ready(function(){
+          $.get(url, function(response){
+            response.forEach(function(data){
+                console.log(data);
+                total.push(data.total);
+                periode.push(data.periode);
+                // Prices.push(data.stockPrice);
+            });
+            var ctx = document.getElementById("canvas").getContext('2d');
+                var myChart = new Chart(ctx, {
+                  type: 'bar',
+                  data: {
+                      labels:periode,
+                      datasets: [{
+                          label: 'Total Pengisi',
+                          data: total,
+                          borderWidth: 1
+                      }]
+                  },
+                  options: {
+                      scales: {
+                          yAxes: [{
+                              ticks: {
+                                  beginAtZero:true
+                              }
+                          }]
+                      }
+                  }
+              });
+          });
+        });
+        </script> --}}
+
 
 <!-- Bootstrap -->
+
+
+
+
 <script type="text/javascript" src="/assets/js/bootstrap/bootstrap.min.js"></script>
 
 <!-- Page Plugins -->
@@ -107,3 +154,5 @@
         e.preventDefault(); $(this).parent('div').remove(); x--;
     })
 </script>
+
+

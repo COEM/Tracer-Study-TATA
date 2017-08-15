@@ -36,6 +36,31 @@
                     <span class="sidebar-title">Alumni</span>
                 </a>
             </li>
+            <li>
+                <a class="accordion-toggle menu-open" href="/alumni/soal">
+                    <span class="glyphicons glyphicons-cup"></span>
+                    <span class="sidebar-title">Statistik</span>
+                    <span class="caret"></span>
+                </a>
+                <ul class="nav sub-nav">
+                    <li class="">
+                        <a href="/admin/stats/jumlah_pengisi">
+                            <span class="glyphicons glyphicons-edit"></span> Jumlah Pengisi </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <span class="glyphicons glyphicons-calendar"></span> Sub 1 </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <span class="glyphicons glyphicons-more_windows"></span> Sub 2 </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <span class="glyphicons glyphicons-magic"></span> Sub 3 </a>
+                    </li>
+                </ul>
+            </li>
         </ul>
     </div>
 </aside>

@@ -30,7 +30,7 @@ class SoalController extends Controller
         $kategori = Kategori::where('kategori',$kategori)->get()->first();
     	$jawaban = new Jawaban;
 
-    	$jawaban->alumni_id = Auth::user()->id;
+    	$jawaban->alumni_id = Auth::user()->alumni_id;
     	$jawaban->kategori_id = $kategori->id;
     	$jawaban->periode = '2017/08/29';
     	$jawaban->ket = json_encode($req->except('_token'));
