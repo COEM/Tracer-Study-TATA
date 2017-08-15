@@ -6,7 +6,7 @@
         <ul class="nav sidebar-menu">
             <li class="sidebar-label pt20">Menu</li>
             <li class="">
-                <a href="#">
+                <a href="/admin">
                     <span class="fa fa-calendar"></span>
                     <span class="sidebar-title">Dashboard</span>
                 </a>
@@ -47,18 +47,7 @@
                         <a href="/admin/stats/jumlah_pengisi">
                             <span class="glyphicons glyphicons-edit"></span> Jumlah Pengisi </a>
                     </li>
-                    <li>
-                        <a href="#">
-                            <span class="glyphicons glyphicons-calendar"></span> Sub 1 </a>
-                    </li>
-                    <li>
-                        <a href="#">
-                            <span class="glyphicons glyphicons-more_windows"></span> Sub 2 </a>
-                    </li>
-                    <li>
-                        <a href="#">
-                            <span class="glyphicons glyphicons-magic"></span> Sub 3 </a>
-                    </li>
+                    
                 </ul>
             </li>
         </ul>
