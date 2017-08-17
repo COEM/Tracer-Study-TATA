@@ -1,5 +1,6 @@
 <?php
-use App\Kategori;
+// use App\Kategori;
+// use Nexmo;
 Route::get('/', function () {
     return view('user.index');
 });
@@ -19,8 +20,12 @@ Route::get('/kontak', function () {
 });
 
 Route::get('/test', function () {
-    $soal = Kategori::find(1);
-    return $soal->soal;
+    // \Nexmo::message()->send([
+	// 	'to' => '+6289604286116',
+	// 	'from' => '16105552344',
+	// 	'text' => 'SIlahkan isi tracer study di http://tracerstudy.coem-dev.id batas pengisian adalah 27 Oktober 2017.'
+	// ]);
+	
 });
 
 Route::get('/dash', 'HomeController@index')->name('dash');

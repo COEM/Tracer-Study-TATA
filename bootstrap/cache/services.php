@@ -29,6 +29,7 @@
     25 => 'App\\Providers\\EventServiceProvider',
     26 => 'App\\Providers\\RouteServiceProvider',
     27 => 'ConsoleTVs\\Charts\\ChartsServiceProvider',
+    28 => 'Nexmo\\Laravel\\NexmoServiceProvider',
   ),
   'eager' => 
   array (
@@ -140,6 +141,7 @@
     'validator' => 'Illuminate\\Validation\\ValidationServiceProvider',
     'validation.presence' => 'Illuminate\\Validation\\ValidationServiceProvider',
     'command.tinker' => 'Laravel\\Tinker\\TinkerServiceProvider',
+    'Nexmo\\Client' => 'Nexmo\\Laravel\\NexmoServiceProvider',
   ),
   'when' => 
   array (
@@ -180,6 +182,9 @@
     array (
     ),
     'Laravel\\Tinker\\TinkerServiceProvider' => 
+    array (
+    ),
+    'Nexmo\\Laravel\\NexmoServiceProvider' => 
     array (
     ),
   ),

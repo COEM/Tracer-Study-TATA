@@ -26,7 +26,7 @@ class SoalController extends Controller
         return view('alumni.soal.'.str_slug($kategori),compact('opsi'));
     }
 
-    public function storeJawabanSoal(Request $req,$kategori){
+    public function storeJawabanSoal(Request $req, $kategori){
         $kategori = Kategori::where('kategori',$kategori)->get()->first();
     	$jawaban = new Jawaban;
 
