@@ -55,5 +55,5 @@ Route::prefix('admin')->group(function() {
 	Route::resource('/alumni', 'Admin\AlumniController');
 	Route::get('lowker/{id}/post','Admin\LowkerController@updatePost');
 	Route::get('stats/jumlah_pengisi', 'Admin\StatsController@jumlahPengisi');
-	Route::get('stats/total_pengisi', 'Admin\StatsController@totalPengisi');
+	Route::get('jadwal/', 'Admin\JadwalController@index');
 });

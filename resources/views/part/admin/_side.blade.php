@@ -19,6 +19,13 @@
             </li>
 
             <li class="">
+                <a href="/admin/jadwal">
+                    <span class="fa fa-calendar"></span>
+                    <span class="sidebar-title">Penjadwalan</span>
+                </a>
+            </li>
+
+            <li class="">
                 <a href="/admin/lowker"">
                     <span class="fa fa-calendar"></span>
                     <span class="sidebar-title">Lowongan Kerja</span>
